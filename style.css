@@ -79,6 +79,14 @@ body>footer {
   padding-bottom: 0em;
 }
 
+header a {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  padding: .5em;
+  
+}
+
 button {
   border: 1px solid yellow;
   border-radius: .2em;
