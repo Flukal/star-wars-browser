@@ -107,7 +107,6 @@ function renderCards(data, renderItem) {
 
 function renderPeople(data) {
   mainElement.textContent = '';
-  createPagerNav(data, renderPeople);
   renderCards(data, function(sectionElement, object) {
     var genderSymbol;
     switch (object.gender) {
@@ -130,7 +129,7 @@ function renderPeople(data) {
     </header>
     <div>
 
-      <button>GIMME THE HOMEWORLD DIGGA</button>
+      <button>Show More</button>
 
       <ul>
         <li>
@@ -168,6 +167,7 @@ function renderPeople(data) {
         loadPlanet(object.homeworld, renderPlanet);
       });
   });
+  createPagerNav(data, renderPeople);
 }
 renderers.people = renderPeople;
 
@@ -185,7 +185,7 @@ function renderSpecies(data) {
     </header>
     <div>
 
-      <button>GIMME THE HOMEWORLD DIGGA</button>
+      <button>Show More</button>
 
       <ul>
         <li>
