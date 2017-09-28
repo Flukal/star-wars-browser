@@ -68,6 +68,7 @@ main {
   flex-grow: 2;
   overflow: auto;
   }
+
 .cards{
   display: flex;
   flex-wrap: wrap;
@@ -79,12 +80,29 @@ body>footer {
   padding-bottom: 0em;
 }
 
-header a {
-  color: black;
+header {
   display: flex;
   flex-direction: row;
+
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  list-style: none;
+}
+
+header a {
+  color: #486177;
   padding: .5em;
-  
+  justify-content: flex-end;
+  padding-right: 3em;
+  cursor: pointer;
+}
+
+header a:hover {
+  color: yellow;
 }
 
 button {
