@@ -37,10 +37,6 @@ h3 {
   font-weight: 100;
 }
 
-header {
-
-}
-
 header,
 footer {
   color: black;
@@ -48,20 +44,22 @@ footer {
   padding: .8em;
 }
 
-body>header,
-body>footer {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-body>header,
-body>footer {
-  padding-top: 1.4em;
-  padding-bottom: 1em;
-}
-
-body>header {
-  border-bottom: 1px solid yellow;
+body> {
+  header,
+  footer {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1.4em;
+    padding-bottom: 1em;
+  }
+  header {
+    border-bottom: 1px solid yellow;
+  }
+  footer {
+    border-top: 1px solid #cac961;
+    padding-top: 0em;
+    padding-bottom: 0em;
+  }
 }
 
 main {
@@ -69,51 +67,36 @@ main {
   overflow: auto;
   }
 
-.cards{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-body>footer {
-  border-top: 1px solid #cac961;
-  padding-top: 0em;
-  padding-bottom: 0em;
-}
-
 header {
   display: flex;
   flex-direction: row;
-
-}
-
-header ul {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  list-style: none;
-}
-
-header a {
-  color: #486177;
-  padding: .5em;
-  justify-content: flex-end;
-  padding-right: 3em;
-  cursor: pointer;
-}
-
-header a:hover {
-  color: yellow;
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    list-style: none;
+  }
+  a {
+    color: #486177;
+    padding: .5em;
+    justify-content: flex-end;
+    padding-right: 3em;
+    cursor;
+  }
+  a:hover {
+    color: yellow;
+  }
 }
 
 button {
   border: 1px solid yellow;
   border-radius: .2em;
   transition: all 1s;
-}
-
-button:hover {
-  border: 1px solid #486177;
-  background-color: white;
+  margin: 1em;
+  :hover {
+    border: 1px solid #486177;
+    background-color: white;
+  }
 }
 
 .next,
@@ -126,100 +109,91 @@ button:hover {
   margin-left: 44%;
 }
 
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .cards > section {
   width: calc(50% - 2em);
   margin: 1em;
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #cac961;
   border-radius: .2em;
+  div {
+    padding: .8em;
+  }
+  header {
+    border-bottom: 1px solid #cac961;
+    display: flex;
+    padding: .8em;
+    border-bottom: 1px solid #cac961;
+    display: flex;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    display: flex;
+    padding: .5em;
+  }
+  .label {
+    flex-grow: 0;
+    width: 60%;
+  }
+  .gender {
+    color: black;
+  }
+  .value {
+    color: #486177;
+  }
 }
 
-.cards > section>header,
-.cards > section>div {
-  padding: .8em;
-}
-
-.cards > section>header {
-  border-bottom: 1px solid #cac961;
-  display: flex;
-}
-
-.cards > section ul {
-  padding: 0;
-}
-
-.cards > section li {
-  display: flex;
-  padding: .5em;
-}
-
-.cards > section .label {
-  flex-grow: 0;
-  width: 60%;
-}
-
-.cards > section .gender {
-  color: black;
-}
-
-.cards > section .value {
-  color: #486177;
-}
 
 /* more CSS*/
 
 
-.modal,
-.modal>.underlay,
-.modal>.body {
-  position: absolute;
-}
-
-.modal,
-.modal>.underlay {
+.modal {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.modal {
+  position: absolute;
   height: 0;
   z-index: 10;
   overflow: hidden;
   transition: height 300ms ease;
+    .underlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    }
+    .body {
+    z-index: 20;
+    top: 3em;
+    right: 3em;
+    bottom: 3em;
+    left: 3em;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    }
+    .open {
+    height: 100%;
+    }
+    .controls {
+    text-align: right;
+    padding: 0.4em 0.4em;
+    }
+    .content {
+    flex-grow: 1;
+    background-color: #000;
+    box-shadow: 0 4px 8px 0 #000;
+    border-radius: 3px;
+    overflow: auto;
+    }
 }
-
-.modal.open {
-  height: 100%;
-}
-
-.modal>.underlay {
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-
-.modal>.body {
-  z-index: 20;
-  top: 3em;
-  right: 3em;
-  bottom: 3em;
-  left: 3em;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal .controls {
-  text-align: right;
-  padding: 0.4em 0.4em;
-}
-
-.modal .content {
-  flex-grow: 1;
-  background-color: #000;
-  box-shadow: 0 4px 8px 0 #000;
-  border-radius: 3px;
-  overflow: auto;
-}
-

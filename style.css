@@ -1,12 +1,10 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  height: 100%;
-}
+  height: 100%; }
 
 body {
   font-family: "Courier New", Courier, monospace;
@@ -17,209 +15,165 @@ body {
   flex-direction: column;
   margin: auto;
   height: 100%;
-  background-image: url('../sky.gif');
+  background-image: url("./sky.gif");
   background-attachment: fixed;
-  background-size: 25rem;
-}
+  background-size: 25rem; }
 
 a,
 a:link,
 a:hover,
 a:visited {
   color: white;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 100;
-}
-
-header {
-
-}
+  font-weight: 100; }
 
 header,
 footer {
   color: black;
   background-color: rgba(255, 255, 255, 0.7);
-  padding: .8em;
-}
+  padding: .8em; }
 
-body>header,
-body>footer {
+body > header,
+body > footer {
   padding-left: 1em;
   padding-right: 1em;
-}
-
-body>header,
-body>footer {
   padding-top: 1.4em;
-  padding-bottom: 1em;
-}
+  padding-bottom: 1em; }
 
-body>header {
-  border-bottom: 1px solid yellow;
-}
+body > header {
+  border-bottom: 1px solid yellow; }
+
+body > footer {
+  border-top: 1px solid #cac961;
+  padding-top: 0em;
+  padding-bottom: 0em; }
 
 main {
   flex-grow: 2;
-  overflow: auto;
-  }
+  overflow: auto; }
 
-.cards{
+.cards {
   display: flex;
-  flex-wrap: wrap;
-}
-
-body>footer {
-  border-top: 1px solid #cac961;
-  padding-top: 0em;
-  padding-bottom: 0em;
-}
+  flex-wrap: wrap; }
 
 header {
   display: flex;
-  flex-direction: row;
-
-}
+  flex-direction: row; }
 
 header ul {
   display: flex;
   flex-direction: row;
   margin: 0;
-  list-style: none;
-}
+  list-style: none; }
 
 header a {
   color: #486177;
   padding: .5em;
   justify-content: flex-end;
   padding-right: 3em;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 header a:hover {
-  color: yellow;
-}
+  color: yellow; }
 
 button {
   border: 1px solid yellow;
   border-radius: .2em;
-  transition: all 1s;
+  transition: all 1s; 
+  margin: 1em;
 }
 
 button:hover {
   border: 1px solid #486177;
-  background-color: white;
-}
+  background-color: white; }
 
 .next,
 .previous {
   display: inline;
-  margin: 1em;
-}
+  margin: 1em; }
 
 .previous {
-  margin-left: 44%;
-}
+  margin-left: 44%; }
 
 .cards > section {
   width: calc(50% - 2em);
   margin: 1em;
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #cac961;
-  border-radius: .2em;
-}
+  border-radius: .2em; }
 
-.cards > section>header,
-.cards > section>div {
-  padding: .8em;
-}
+.cards > section > header,
+.cards > section > div {
+  padding: .8em; }
 
-.cards > section>header {
+.cards > section > header {
   border-bottom: 1px solid #cac961;
-  display: flex;
-}
+  display: flex; }
 
 .cards > section ul {
-  padding: 0;
-}
+  padding: 0; }
 
 .cards > section li {
   display: flex;
-  padding: .5em;
-}
+  padding: .5em; }
 
 .cards > section .label {
   flex-grow: 0;
-  width: 60%;
-}
+  width: 60%; }
 
 .cards > section .gender {
-  color: black;
-}
+  color: black; }
 
 .cards > section .value {
-  color: #486177;
-}
+  color: #486177; }
 
 /* more CSS*/
-
+.modal,
+.modal > .underlay,
+.modal > .body {
+  position: absolute; }
 
 .modal,
-.modal>.underlay,
-.modal>.body {
-  position: absolute;
-}
-
-.modal,
-.modal>.underlay {
+.modal > .underlay {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 .modal {
   height: 0;
   z-index: 10;
   overflow: hidden;
-  transition: height 300ms ease;
-}
+  transition: height 300ms ease; }
 
 .modal.open {
-  height: 100%;
-}
+  height: 100%; }
 
-.modal>.underlay {
+.modal > .underlay {
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.7);
-}
+  background-color: rgba(255, 255, 255, 0.7); }
 
-
-.modal>.body {
+.modal > .body {
   z-index: 20;
   top: 3em;
   right: 3em;
   bottom: 3em;
   left: 3em;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .modal .controls {
   text-align: right;
-  padding: 0.4em 0.4em;
-}
+  padding: 0.4em 0.4em; }
 
 .modal .content {
   flex-grow: 1;
   background-color: #000;
   box-shadow: 0 4px 8px 0 #000;
   border-radius: 3px;
-  overflow: auto;
-}
-
+  overflow: auto; }
